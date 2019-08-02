@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inserisci</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of rooms">
+      <ion-item>
+        <ion-label>{{A.value}}</ion-label>
+        <ion-select #A interface="popover" (ionChange)="onChangeS1(A.value, item.room)">
+          <ion-select-option *ngFor="let ga of teams">{{ga.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{B.value}}</ion-label>
+        <ion-select #B interface="popover" (ionChange)="onChangeS2(B.value, item.room)">
+          <ion-select-option *ngFor="let ga of teams">{{ga.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-button color="primary" (click)="send()" expand="block">Invia dati</ion-button>
+  </ion-toolbar>
+</ion-footer>

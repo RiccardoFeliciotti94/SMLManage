@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Aggiorna partite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-row>
+      <ion-col>Nickname</ion-col><ion-col>Goal</ion-col><ion-col>Assist</ion-col>
+    </ion-row>
+    <ion-item *ngFor="let item of players">
+      <ion-col size="2"><font size="2">{{item.Nickname}}</font></ion-col>
+      <ion-col>
+        <ion-button color="danger" size="small" (click)="minG(item)">-1</ion-button>
+      </ion-col>
+      <ion-col>
+        {{item.Goal}}
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" size="small" (click)="plusG(item)">+1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" size="small" (click)="minA(item)">-1</ion-button>
+      </ion-col>
+      <ion-col>
+        {{item.Assist}}
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" size="small" (click)="plusA(item)">+1</ion-button>
+      </ion-col>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-button color="primary" (click)="send()" expand="block">Invia dati</ion-button>
+  </ion-toolbar>
+</ion-footer>
+

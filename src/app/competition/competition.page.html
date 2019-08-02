@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Competizioni</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>Torneo</ion-item>
+    <ion-item>
+      <ion-label>Tor</ion-label>
+      <ion-select #C interface="popover" (ionChange)="onChangeTor(C.value)">
+        <ion-select-option *ngFor="let item of torneo">{{item.Nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>Comp1</ion-item>
+    <ion-item>
+      <ion-label>S1</ion-label>
+      <ion-select #A interface="popover" (ionChange)="onChangeS1(A.value)">
+        <ion-select-option *ngFor="let item of teams">{{item.Nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>S2</ion-label>
+      <ion-select #B interface="popover" (ionChange)="onChangeS2(B.value)">
+        <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>Comp2</ion-item>
+    <ion-item>
+        <ion-label>S3</ion-label>
+        <ion-select #D interface="popover" (ionChange)="onChangeS3(D.value)">
+          <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>S4</ion-label>
+        <ion-select #E interface="popover" (ionChange)="onChangeS4(E.value)">
+          <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>Comp3</ion-item>
+    <ion-item>
+      <ion-label>S5</ion-label>
+      <ion-select #F interface="popover" (ionChange)="onChangeS5(F.value)">
+        <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>S6</ion-label>
+      <ion-select #G interface="popover" (ionChange)="onChangeS6(G.value)">
+        <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>Comp4</ion-item>
+    <ion-item>
+        <ion-label>S7</ion-label>
+        <ion-select #H interface="popover" (ionChange)="onChangeS7(H.value)">
+          <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>S8</ion-label>
+        <ion-select #I interface="popover" (ionChange)="onChangeS8(I.value)">
+          <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>Comp5</ion-item>
+    <ion-item>
+        <ion-label>S9</ion-label>
+        <ion-select #L interface="popover" (ionChange)="onChangeS9(L.value)">
+          <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>S10</ion-label>
+        <ion-select #M interface="popover" (ionChange)="onChangeS10(M.value)">
+          <ion-select-option *ngFor="let item of teams" value="{{item.Nome}}">{{item.Nome}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+</ion-content>
+
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-button color="primary" (click)="send()" expand="block">Invia dati</ion-button>
+    </ion-toolbar>
+  </ion-footer>
