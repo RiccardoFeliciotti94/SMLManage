@@ -38,6 +38,10 @@ export class CreateBidPage implements OnInit {
     this.presentAlert();
   }
 
+  insertGiocatori(){
+    this.router.navigate(['add-players']);
+  }
+
   updateDB(){
     var headers = new Headers();
 
@@ -45,10 +49,10 @@ export class CreateBidPage implements OnInit {
     headers.append('Content-Type', 'application/json' );
 
     let options = new RequestOptions({ headers: headers });
-    this.router.navigate(['add-players']);
     this.http.post('http://riccardohosts.ddns.net:8080/insertAsta.php',options).pipe(map(res => res.json()))
-    .subscribe(res => {this.router.navigate(['add-players']);});
+    .subscribe(res => {});
   }
+
 
   goBidders(){this.router.navigate(['add-bidders']);}
 
